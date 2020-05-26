@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Registration" content="A page for user to registrator my web">
+        <title>Create new account</title>
+        <link rel="stylesheet" type="text/css" href= "stylesheets/registration.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form 
+                class="login"
+                action="users/register" 
+                method="POST" 
+                enctype="application/x-www-form-urlencoded">
+
+                <h1>Create new account</h1>
+                <input type="text" name="username" class="login-input" placeholder="Username" autofocus>
+                <input type="email" name="email" class="login-input" placeholder="Email">
+                <input type="password" name="password" class="login-input" placeholder="Password" pattern=".{8,}"  required title="8 characters minimum">
+                <input type="submit" class="login-submit">
+                <p class="login-help"><a href="/login">Back to Login</a></p> 
+        </div>
+    </form>
+
+    <footer class="footer">
+        <span id="footer-name">Ivy Fan @ 2020</span><br/>
+        <a id="email-link" href="mailto:xfan4@mail.sfsu.edu">Contact Owner</a>
+    </footer>
+
+    </body>  
+</html>
+
+
+
+
+
+<!--         
+        <div class="container">
+            <div class="header">
+                <header><h1>Registration Form</h1></header>
+            </div>    
+
+            <div class="contents">
+                <label id="Uname">Username</label>
+                <input type="text" name="username" placeholder="Enter a username" required>
+                <br/>
+
+                <label id="Email">Email</label>
+                <input type="email" name="email" placeholder="Enter an email" required>
+                <br/>
+
+                <label id="Password">Password</label>
+                <input type="password" name="password" placeholder="Enter a password" required name>
+                <br/>
+
+                <label id="Comfirm_Password">Confirm Password</label>
+                <input type="password" placeholder="Enter the confirm password" required> -->
+            <!-- </div> -->
+
+            <!-- <div class="statements">
+                <input type="radio"> I am 13 years of age or older.<br/>
+                <input type="radio"> I accpet <a href="https://en.wikipedia.org/wiki/Terms_of_service"><b>Terms of Service</b></a> and <a href="https://en.wikipedia.org/wiki/Privacy_policy"><b>Privacy Rules</b></a>.<br/>
+            </div> -->
+            <!-- <div class="submission">
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset", name="cancle" value="Cancel"> -->
+            <!-- </div>
+            
+        </div>  -->

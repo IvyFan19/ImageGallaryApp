@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Postimage" content="width=device-width, initial-scale=1.0">
+        <title>Postimage</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/post.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form 
+                id="post-image"
+                class="login"
+                method="POST" 
+                enctype="multipart/form-data">
+                 <!-- action="/posts/createPost"  -->            
+                <h1>Post Image</h1>
+                <input type="text" name="title" class="login-input" placeholder="Image Name" autofocus>
+                <input type="text" name="description" class="login-input" placeholder="Description">
+                <label>
+                    <input 
+                        id="img-select"
+                        type="file"
+                        name="uploadImage"
+                    />
+                </label>
+
+                <input type="submit" class="login-submit">
+
+                <p class="login-help"><a href="/">Back to home page</a></p>
+            </form>
+        </div>
+        <footer class="footer">
+            <span id="footer-name">Ivy Fan © 2020</span><br/>
+            <a id="email-link" href="mailto:xfan4@mail.sfsu.edu">Contact Owner</a>
+        </footer>
+
+        <script>
+            const _form = document.getElementById('post-image');
+            _form.onsubmit = function(event) {
+                event.preventDefault();
+                let _body = new FormData(_form);
+                
+                axios('/posts/createPost',{
+                    data: _body,
+                    method:"POST"
+                })
+                .then((data) => {
+                    console.log(data.data);
+                    alert(data.data.message);
+                    location.replace(data.data.redirect);
+                })
+                .catch(err => console.log(err));
+            }
+        </script> 
+    
+    </body>  
+</html>
+

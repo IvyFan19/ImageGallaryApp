@@ -1,0 +1,42 @@
+body{
+    background: url("star.jpg"); 
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont;
+    margin-top: 2rem;
+    padding-right: 150px;
+    padding-left: 150px;
+    font-size: 17px;
+  
+  }
+
+#info-message-grid{
+    display: block; 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+    text-align: left;
+    color: #fff;
+}
+
+#image-post{
+
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 2px 2px white; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0rem;
+    width: 80%;
+}
+
+
+/* #comment-box-text{
+    font-size: 17px;
+    height:80px
+} */
+
+
+
+

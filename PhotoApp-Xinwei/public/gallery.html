@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skys</title>
+    <link rel="stylesheet" href="stylesheets/gallery.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script defer src="js/frontend.js"></script>
+  </head>
+  
+  <body>
+    <!-- Modal Code -->
+		<div class="modal" id="overlay">
+			<div id="image"><img src="" id="modalImg"></div>
+		</div>
+
+    <div class="topnav">
+      <a class=post-button id="post" href="/postimage">+ New Post</a>
+      <input id="search-text" name="search-text" type="text" />
+      <button id="text-bar-icon">
+        <i  class="fa fa-search fa_custom fa-2x"></i>
+      </button>
+      <a class=auth-button id="loginBotton" href="/login">Log in</a> 
+    </div>
+
+    <div id="main-content" class="masonryholder">
+
+    </div>
+      <script>
+
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+        }
+        
+        function createCard(data) {
+          
+          return `<div class="masonryblocks" id=post-${data.id}> \
+                    <img src="${data.photopath}" \
+                    style="max-width:100%;cursor:pointer" \
+                    onclick="onClick(this)" class="modal-hover-opacity"> \
+                    <div class="card-body"> \
+                      <p class="card-title">${data.title}</p> \   
+                      <p class="card-text">${data.description}</p> \
+                      <a href = "/posts/imagepost/${data.id}" class="anchor-buttons">Details</a> \               
+                    </div> \
+                    </div> \
+
+                  <div id="modal01" class="modal" onclick="this.style.display='none'"> \
+                    <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span> \
+                   <div class="modal-content"> \
+                   <img id="img01" style="max-width:60%; max-height: calc(100vh - 225px);  border: 10px solid;border-radius: 5px; border-color: #ccc;"> \
+                  </div>  \
+                 </div>`;      
+        }
+
+        function runSearch() {
+          let searchTerm = document.getElementById('search-text').value;
+          let searchURL = 'http://localhost:3000/posts/search/' + searchTerm;
+          fetch(searchURL)
+            .then((data) => data.json())
+            .then((dataAsObject) => {
+              console.log(dataAsObject);
+              let _html = "";
+              dataAsObject.forEach((post) => {
+                _html += createCard(post);
+                
+              })
+              document.getElementById('main-content').innerHTML = _html;
+            })
+            .catch((err) => console.log(err));
+        }
+
+        // Trigger HTML button or press Enter are both return search-text 
+        document.getElementById('text-bar-icon').onclick = runSearch;
+        document.getElementById('search-text').onkeypress = function(e){
+          if(e.keyCode==13){
+            runSearch();
+          }
+        }
+
+        fetch("http://localhost:3000/posts/getRecentPosts/")
+          .then((data) => data.json())
+          .then((dataAsObject) => {
+            console.log(dataAsObject);
+            let _html = "";
+            dataAsObject.forEach((post) => {
+              _html += createCard(post);
+              
+            })
+            document.getElementById('main-content').innerHTML = _html;
+          })
+          .catch((err) => console.log(err));
+
+        </script>
+           
+  </body>
+</html>
