@@ -57,8 +57,8 @@
 
         function runSearch() {
           let searchTerm = document.getElementById('search-text').value;
-          let searchURL = 'http://localhost:3000/posts/search/' + searchTerm;
-          fetch(searchURL)
+          let searchURL = '/posts/search/' + searchTerm;
+          fetch(searchURL, {mode: 'cors'})
             .then((data) => data.json())
             .then((dataAsObject) => {
               console.log(dataAsObject);
@@ -80,7 +80,7 @@
           }
         }
 
-        fetch("http://localhost:3000/posts/getRecentPosts/")
+        fetch("/posts/getRecentPosts/", {mode: 'cors'})
           .then((data) => data.json())
           .then((dataAsObject) => {
             console.log(dataAsObject);
