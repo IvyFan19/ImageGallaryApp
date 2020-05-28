@@ -6,8 +6,8 @@ function logoutClick(event){
             'Content-type': 'appilcation/json'
         }
     }
-    let fetchURL = 'http://localhost:3000/users/logout';
-    fetch(fetchURL, fetchOption)
+    let fetchURL = '/users/logout';
+    fetch(fetchURL, fetchOption, {mode: 'cors'})
         .then((data) => {
             console.log(data);
             let logButton = document.getElementById('loginBotton');

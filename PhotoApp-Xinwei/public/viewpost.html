@@ -44,8 +44,8 @@
         function buildMessage(msgData) {
             let url = document.URL.split('/');
             let _id = url[url.length-1];
-            let postURL = "http://localhost:3000/posts/getPostById/" + _id;
-            fetch(postURL)
+            let postURL = "/posts/getPostById/" + _id;
+            fetch(postURL, {mode: 'cors'})
                 .then((data) => data.json())
                 .then((dataAsObject) => {
                 console.log(dataAsObject);
