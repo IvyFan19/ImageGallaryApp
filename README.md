@@ -43,7 +43,7 @@ Launch the test runner in the interactive watch mode.<br />
 ![Login](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/login.png)
 
 ### Registration
-![Registration](https://github.com/csc317-02-spring2020/csc317-termproject-IvyFan19/blob/master/screenshots/register.png)
+![Registration](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/register.png)
 
 ### New post
 ![Poster](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/post.png)
