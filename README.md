@@ -36,18 +36,18 @@ Launch the test runner in the interactive watch mode.<br />
 - npm run devStart
 
 ## Demo
-### Home 
-![Homepage](https://github.com/csc317-02-spring2020/csc317-termproject-IvyFan19/blob/master/screenshots/Home.png)
+### Home Page 
+![Homepage](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/Home.png)
 
 ### Login 
-![Login](https://github.com/csc317-02-spring2020/csc317-termproject-IvyFan19/blob/master/screenshots/login.png)
+![Login](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/login.png)
 
 ### Registration
 ![Registration](https://github.com/csc317-02-spring2020/csc317-termproject-IvyFan19/blob/master/screenshots/register.png)
 
-### Poster
-![Poster](https://github.com/csc317-02-spring2020/csc317-termproject-IvyFan19/blob/master/screenshots/post.png)
+### New post
+![Poster](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/post.png)
 
 ### View image
-![Viewer](https://github.com/csc317-02-spring2020/csc317-termproject-IvyFan19/blob/master/screenshots/showimage.png)
+![Viewer](https://github.com/IvyFan19/ImageGallaryApp/blob/master/screenshots/showimage.png)
 
