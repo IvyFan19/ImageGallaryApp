@@ -2,8 +2,6 @@
 
 # Purpose
 Developed a space photo sharing community website enabling users to search, share, and view space topic images.
-
-## Announce
 <h4>-- Copyright Notice --<br />
 Demo picures are open source, from the website [Unsplash](https://unsplash.com/s/photos/open-source).
 
