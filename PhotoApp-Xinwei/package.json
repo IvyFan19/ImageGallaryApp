@@ -20,6 +20,6 @@
     "mysql": "github:mysqljs/mysql",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.3",
-    "sharp": "^0.25.2"
+    "sharp": "^0.30.5"
   }
 }
